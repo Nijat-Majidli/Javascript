@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
 
-<body>
-    <script>
-        var totalInteger = 0;
-        var averageInteger = 0;
-        var meter = 0
-        
-        while (true) 
-        {
-            var integer = window.prompt("Entrez un nombre entier (pour sortir entrer 0) :");
-            integer = Number(integer);
-            // The Number() method converts a string into a number.
+    <body>
+        <script>
+            var totalInteger = 0;
+            var averageInteger = 0;
+            var meter = 0
             
-            if(integer==0)
+            while (true) 
             {
-             break;   
+                var integer = window.prompt("Entrez un nombre entier (pour sortir entrer 0) :");
+                integer = Number(integer);
+                // The Number() method converts a string into a number.
+                
+                if(integer==0)
+                {
+                break;   
+                }
+
+                totalInteger += integer;
+                meter ++;
+                averageInteger = totalInteger / meter;
             }
 
-            totalInteger += integer;
-            meter ++;
-            averageInteger = totalInteger / meter;
-        }
-
-        window.alert("La somme total : " + totalInteger + "\n La somme moyenne : " + averageInteger)
-        
-    </script>    
-</body>
+            window.alert("La somme total : " + totalInteger + "\n La somme moyenne : " + averageInteger)
+            
+        </script>    
+    </body>
 </html>

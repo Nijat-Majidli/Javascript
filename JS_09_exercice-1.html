@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
 
-<body>
-    <p> <img src="papillon.jpg"> </p>
-    <p id="first"> </p>
-    <p id="second"> </p>
-    
+    <body>
+        <p id="first"> </p>
+        <p id="second"> </p>
+        <p id="third"> </p>
+        
 
-    <script>
+        <script>
 
-        function afficheImg(image)
-        {
-            document.getElementById("first").innerHTML = "<img src=" + image + ">"
-        }
+            var x = window.prompt("Entrez un nombre :");
+            var y = window.prompt("Entrez multiplacateur :");
+            
+            afficheImg("papillon.jpg");
+            
+            var z = cube(x);
+            document.getElementById("second").innerHTML = "Le cube de " + x + " est égal à " + z;
+            
+            var w = produit(x,y);
+            document.getElementById("third").innerHTML = "Le produit de " + x + "*" + y + " est égal à " + w;
 
-        function cube(x)
-        {
-            result = x * x * x;
-            return result;
-        }
 
-        function produit(x,y)
-        {
-            result = x * y;
-            return result;
-        }
+            function afficheImg(image)
+            {
+                document.getElementById("first").innerHTML = "<img src=" + image + ">"
+            }
 
-        var image = afficheImg("papillon.jpg")
 
-        var cube = cube(5);
-        document.getElementById("first").innerHTML = "Le cube de 5 est égal à " + cube;
+            function cube(x)
+            {
+                result = x * x * x;
+                return result;
+            }
 
-        var produit = produit(5,2);
-        document.getElementById("second").innerHTML = "Le produit de 5 * 2 est égal à " + produit;
+            function produit(x,y)
+            {
+                result = x * y;
+                return result;
+            }
 
-    </script>    
-</body>
+        </script>    
+    </body>
 </html>

@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
 
-<body>
-    <script>
-        var compteur = 0;
-        var prénomSaisi = "";
+    <body>
+        <script>
+            var compteur = 0;
+            var prénomSaisi = "";
 
-        while(true)
-        {
-            var prénom = window.prompt("Saisissez le prénom N°" + (compteur+1) + "\n Pour arrêter laisser le champ vide.");            
-            
-            if (prénom=="")
+            while(true)
             {
-                break;
-            }
+                var prénom = window.prompt("Saisissez le prénom N°" + (compteur+1) + "\n Pour arrêter laisser le champ vide.");            
+                
+                if (prénom=="")
+                {
+                    break;
+                }
 
-            prénomSaisi += " " + prénom;
-            compteur++;
-        }
-        
-        window.alert("Nombre de prénom :" + compteur + "\n Les prénoms saisis :" + prénomSaisi);
-        
-    </script>    
-</body>
+                prénomSaisi += " " + prénom;
+                compteur++;
+            }
+            
+            window.alert("Nombre de prénom :" + compteur + "\n Les prénoms saisis :" + prénomSaisi);
+            
+        </script>    
+    </body>
 </html>

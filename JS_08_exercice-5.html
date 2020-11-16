@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
 
-<body>
+    <body>
 
-    <script>
-        var voyelle = ['a', 'e', 'i', 'o', 'u', 'y'];
-        var nombreVoyelle = 0;
-        var listVoyelle = "";
-        var nombreConsonne; 
-        var mot = window.prompt("Entrer un mot");
+        <script>
+            var voyelle = ['a', 'e', 'i', 'o', 'u', 'y'];
+            var nombreVoyelle = 0;
+            var listVoyelle = "";
+            var nombreConsonne; 
+            var mot = window.prompt("Entrer un mot");
 
-        for(i=0; i<mot.length; i++)
-        {
-            var lettre = mot.substr(i,1);
-         
-            // La méthode indexOf() nous retourne une valeur "-1" si la paramètre "x" n'est pas dans la variable: 
-            // variable.indexOf(x)==-1. Si la valeur est >=0 donc x est dans la variable. 
-            if(voyelle.indexOf(lettre)>=0)
+            for(i=0; i<mot.length; i++)
             {
-            listVoyelle += mot[i] + ", " ;
-            nombreVoyelle++ ;
+                var lettre = mot.substr(i,1);
+            
+                // La méthode indexOf() nous retourne une valeur "-1" si la paramètre "x" n'est pas dans la variable: 
+                // variable.indexOf(x)==-1. Si la valeur est >=0 donc x est dans la variable. 
+                if(voyelle.indexOf(lettre)>=0)
+                {
+                listVoyelle += mot[i] + ", " ;
+                nombreVoyelle++ ;
+                }
+            
+                nombreConsonne = mot.length - nombreVoyelle;
             }
-        
-            nombreConsonne = mot.length - nombreVoyelle;
-        }
 
-        document.write("Dans le mot " + mot + " il y a " + nombreVoyelle + " voyelles, qui sont " + listVoyelle + " et " + 
-        nombreConsonne + " consonnes.")
-    
-    </script>    
-</body>
+            document.write("Dans le mot " + mot + " il y a " + nombreVoyelle + " voyelles, qui sont " + listVoyelle + " et " + 
+            nombreConsonne + " consonnes.")
+        
+        </script>    
+    </body>
 </html>
