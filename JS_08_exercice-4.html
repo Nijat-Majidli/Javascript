@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+    
+    
+    var X = window.prompt("Saisissez un nombre entier : ");
+    var N = window.prompt("Saisissez le nombre N : ");
+
+    var resultat; 
+    var reponse="";
+    var i; 
+
+    for(i=1; i<=N; i++)
+    {
+        resultat = X * i;
+        reponse += X + "*" + i + "=" + resultat + "\n";
+    }
+    
+    window.alert(reponse);
+
+</script>    
+</body>
+</html>

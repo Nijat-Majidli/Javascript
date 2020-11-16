@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p> <img src="papillon.jpg"> </p>
+    <p id="first"> </p>
+    <p id="second"> </p>
+    
+
+    <script>
+
+        function afficheImg(image)
+        {
+            document.getElementById("first").innerHTML = "<img src=" + image + ">"
+        }
+
+        function cube(x)
+        {
+            result = x * x * x;
+            return result;
+        }
+
+        function produit(x,y)
+        {
+            result = x * y;
+            return result;
+        }
+
+        var image = afficheImg("papillon.jpg")
+
+        var cube = cube(5);
+        document.getElementById("first").innerHTML = "Le cube de 5 est égal à " + cube;
+
+        var produit = produit(5,2);
+        document.getElementById("second").innerHTML = "Le produit de 5 * 2 est égal à " + produit;
+
+    </script>    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var nombre1 = window.prompt("Saisissez 1er nombre entier:");
+        var nombre2 = window.prompt("Saisissez 2eme nombre entier:");
+        var operateur = window.prompt("Saisissez un operateur (+,-,*,/) :");
+        
+        nombre1 = Number(nombre1);
+        nombre2 = Number(nombre2);
+        // The Number() method converts a string into a number.
+
+        if (operateur=="/" && nombre2==0) 
+        {
+            window.alert("2eme nombre ne peut pas être égal a 0.");
+        }
+        
+        switch(operateur) 
+        {
+            case "+" :
+                window.alert(nombre1 + nombre2); 
+                break;
+
+            case "-" :
+                window.alert(nombre1 - nombre2);
+                break;
+
+            case "*" :
+                window.alert(nombre1 * nombre2); 
+                break;
+
+            case "/" :
+                window.alert(nombre1 / nombre2); 
+                break;
+            
+            default: 
+                window.alert("Mauvais operateur!");
+        }
+
+
+    </script>    
+</body>
+</html>
