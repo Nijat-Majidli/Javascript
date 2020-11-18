@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            var sizeArray;
+            var poste;
+            var index;
+            var maxNumber=0;
+            var totalNumber=0;
+            var averageNumber;
+
+            GetInteger();
+            InitTab();
+            SaisieTab();
+            AfficheTab();
+            RechercheTab();
+            InfoTab();
+
+            function GetInteger(x) 
+            {
+                return parseInt(x);
+            }
+
+            function InitTab()
+            {
+                sizeArray = window.prompt("Entrez le nombre d'éléments de tableau :");
+                sizeArray = GetInteger(sizeArray);
+                myArray = [];
+            }
+
+            function SaisieTab()
+            {
+                while(myArray.length < sizeArray)
+                {
+                    poste = window.prompt("Saisissez un nombre pour ajouter au tableau:");
+                    poste = GetInteger(poste);
+                    myArray.push(poste);
+                }
+            }
+
+            function AfficheTab()
+            {
+                document.write("tableau myArray = " + myArray + "<br>");
+            }
+
+            function RechercheTab()
+            {
+                index = window.prompt("Entrez l'indice de l'élément du tableau :");
+                index = GetInteger(index);
+                document.write("Le nombre " + myArray[index] + " corresponde à l'indice " + index + " du tableau myArray." + "<br>");
+            }
+
+            function InfoTab()
+            {
+                for(i=0; i<sizeArray; i++)
+                {
+                    if(maxNumber<myArray[i])
+                    {
+                        maxNumber=myArray[i];
+                    }   
+                }
+
+                for(i=0; i<sizeArray; i++)
+                {
+                    totalNumber+=myArray[i];
+                    averageNumber=totalNumber/sizeArray;
+                }
+
+                document.write("Maximum nombre est : " + maxNumber + " et moyenne est : " + averageNumber)
+            }
+
+        </script>
+    </body>
+</html>
