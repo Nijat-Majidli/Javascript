@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            var firstArray = [];
+            var totalNumber = 0;
+            var averageNumber; 
+
+            while(true)
+            {
+                var number = Number(window.prompt("Saisissez un nombre (0 pour sortir) : "))
+                
+                if(number==0)
+                {
+                    break;
+                }
+
+                firstArray.push(number);
+                totalNumber += number;
+                averageNumber = totalNumber/firstArray.length;
+            }
+            
+            document.write("Le nombre de valeurs saissies: " + firstArray.length + "<br>" + "La somme total: " + totalNumber + 
+            "<br>" + "Average number: " + averageNumber)
+
+        </script>    
+    </body>
+</html>
