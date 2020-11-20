@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS 15 : Exercice</title>
+    </head>
+
+    <body>
+        <p> Saisissez un text puis pressez le bouton 'Controler' </p> 
+        <form>
+            <input type="text" id="result" value="">
+            <input type="submit" value="Contrôler" onclick="message()">
+        </form>
+
+        <br>
+        <br>
+
+        <div id="label1">Entrez votre proposition</div>
+        <input id="textBox1" value="">
+        <input type="button" id="button1" value="Verifier" onclick="verif();"> 
+        <br>
+        
+
+        <script>
+            function message()
+            {
+                var text = document.getElementById("result").value;
+                window.alert("Vous avez saisi: " + text);
+                
+            }
+
+            var random = parseInt(Math.random()*100+1);
+            document.write("Random number: " + random);
+
+            function verif()
+            {
+                var number = document.getElementById("textBox1").value;
+                if(number==random)
+                {
+                    document.getElementById("label1").innerHTML="Bon reponse";
+                }
+                else if(number<random)
+                {
+                    document.getElementById("label1").innerHTML="Trop petit";
+                }
+                else
+                {
+                    document.getElementById("label1").innerHTML="Trop grand";
+                }
+            }
+
+        </script>
+    </body>
+</html>

@@ -16,15 +16,15 @@
 
             var x = window.prompt("Entrez un nombre :");
             var y = window.prompt("Entrez multiplacateur :");
-            
-            afficheImg("papillon.jpg");
-            
+
             var z = cube(x);
             document.getElementById("second").innerHTML = "Le cube de " + x + " est égal à " + z;
             
             var w = produit(x,y);
             document.getElementById("third").innerHTML = "Le produit de " + x + "*" + y + " est égal à " + w;
 
+
+            afficheImg("papillon.jpg");
 
             function afficheImg(image)
             {
