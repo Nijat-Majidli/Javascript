@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <p id="print"> </p>
+
+
+        <script>
+                var age = "";
+                var teenager = "";
+                var young = "";
+                var adult = "";
+                var numberTeenager = 0;
+                var numberYoung = 0;
+                var numberAdult = 0;
+
+            while(true)
+            {
+                var age = parseInt(window.prompt("Saisissez un âge: "));
+                
+                if(age<20)
+                {
+                    teenager += age + ", ";
+                    numberTeenager++;
+                }
+                else if (age>40)
+                {
+                    adult += age + ", ";
+                    numberAdult++;
+                }
+                else
+                {
+                    young += age + ", ";
+                    numberYoung++;
+                }
+                if(age>=100)
+                {
+                    break;
+                }
+            }
+
+            document.getElementById("print").innerHTML = "Il y a " + numberTeenager + " adolescents avec l'âge de: " + teenager + " ans." + 
+            "<br>" + "Il y a " + numberYoung + " jeunes avec l'âge de: " + young + " ans." + 
+            "<br>" + "Il y a " + numberAdult + " adultes avec l'âge de: " + adult + " ans." 
+
+        </script>
+    </body>
+</html>
