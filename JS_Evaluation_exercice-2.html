@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <p id="first"> </p>
+
+        <script>
+            var x = parseInt(window.prompt("Entrez un nombre: "));
+
+            TableMultiplication(x);
+
+            function TableMultiplication(x)
+            {
+                var result = "";
+
+                for (i=1; i<=10; i++) 
+                {
+                    var multiply = i * x;
+                    
+                    result += i + " * " + x + "=" + multiply + "<br>";
+                }
+
+                document.getElementById("first").innerHTML = "Table multiplication de " + x + "<br>" + result; 
+            }
+
+        </script>
+    </body>
+</html>
