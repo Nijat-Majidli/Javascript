@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+         <!-- Link to CSS file -->
+        <link rel="stylesheet"  href="JS_16_exercice.css">
+        <!-- Responsive web design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <!-- PAGE HEAD -->
+        <header>
+            <h1> Vos coordonnées : </h1>
+        </header>
+        
+        
+        <!-- PAGE MAIN CONTENT -->
+        <h2 id="zone"> <sup>*</sup> Ces zones sont obligatoires pour envoyer le formulaire. </h2>
+
+        <div class="row">
+            <div class="column1">
+                <h3> Société :  </h3>  
+                <h3> Personne à contacter : </h3>
+                <h3 id="adress"> Adresse de l'entreprise : </h3>
+                <h3> Code Postal :  </h3>
+                <h3> Ville : </h3>
+                <h3> E-mail :  </h3>
+                <h3> Téléphone :  </h3>
+                <h3 id="environnementTechnique"> Sélectionnez l'environnement technique du projet : </h3>
+                <select id="select">
+                    <option value=""> Choisissez </option>
+                    <option> Access </option>
+                    <option> Java </option>
+                    <option> Delphi </option>
+                    <option> Windev </option>
+                    <option> Visual Basic </option>
+                    <option> Power Builder </option>
+                    <option> Internet </option>
+                    <option> Intranet </option>
+                    <option> Windows NT </option>
+                    <option> Unix </option>
+                    <option> SQL Server </option>
+                    <option> Oracle </option>
+                    <option> Autres... </option>
+                </select>   
+            </div>
+
+            <div class="column2">
+                <form action="destination.php" method="POST">
+                    <p> <input type="text" name="société" id="society"> <sup>*</sup> </p>
+                    <p> <input type="text" name="contacter" id="contact"> <sup>*</sup> </p>
+                    <textarea name="adress" rows="4" cols="30"> </textarea>
+                    <p> <input type="text" name="codePostal" id="codePostal"> <sup>*</sup> </p>
+                    <p> <input type="text" name="ville" id="city"> <sup>*</sup>  </p>
+                    <p> <input type="email" name="email"> <sup>*</sup> </p>
+                    <p> <input type="tel" name="telephone"> </p>
+                    <textarea name="comment" rows="7" cols="20" id="textZone"> </textarea>
+                </form>   
+            </div>
+
+            <p class="button">
+                <input type="submit" name="send" value="Envoyer" onclick=message()>
+                <input type="reset" name="delete" value="Effacer">
+            </p>
+        </div> 
+    
+
+        <!-- JAVASCRIPT CODE -->
+        <script>            
+            function message()
+            {
+                var société = document.getElementById("society").value;
+                var contacter = document.getElementById("contact").value;
+                var codePostal = Number(document.getElementById("codePostal").value);
+                var ville = document.getElementById("city").value;
+
+                var filtreString = new RegExp("^[A-Z a-z 0-9]+$");
+                var filtreNumber = new RegExp("^[0-9]{5}$");
+                
+                var resultat1 = filtreString.test(société);
+                var resultat2 = filtreString.test(contacter);
+                var resultat4 = filtreString.test(ville);
+
+                var resultat3 = filtreNumber.test(codePostal);
+
+                if (resultat1==false)
+               {
+                    window.alert("Entre le nom de la société s.v.p. !");
+                }
+
+                if (resultat2==false)
+               {
+                    window.alert("Entre le nom de la personne à contacter s.v.p. !");
+                }
+
+                if (resultat3==false)
+               {
+                    window.alert("Entre le code postal s.v.p. !");
+                }
+
+                if (resultat4==false)
+               {
+                    window.alert("Entre le nom de la ville s.v.p. !");
+                }
+
+                var select = document.getElementById("select").value;
+                
+                document.getElementById("textZone").innerHTML = select;
+            }
+        </script>
+    </body>
+</html>

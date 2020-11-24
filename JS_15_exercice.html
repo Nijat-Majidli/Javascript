@@ -9,14 +9,14 @@
     <body>
         <p> Saisissez un text puis pressez le bouton 'Controler' </p> 
         <form>
-            <input type="text" id="result" value="">
+            <input type="text" id="result">
             <input type="submit" value="Contrôler" onclick="message()">
         </form>
 
         <br>
         <br>
 
-        <div id="label1">Entrez votre proposition</div>
+        <div id="label1"> Entrez votre proposition </div>
         <input id="textBox1" value="">
         <input type="button" id="button1" value="Verifier" onclick="verif();"> 
         <br>
@@ -27,7 +27,6 @@
             {
                 var text = document.getElementById("result").value;
                 window.alert("Vous avez saisi: " + text);
-                
             }
 
             var random = parseInt(Math.random()*100+1);
@@ -49,7 +48,6 @@
                     document.getElementById("label1").innerHTML="Trop grand";
                 }
             }
-
         </script>
     </body>
 </html>

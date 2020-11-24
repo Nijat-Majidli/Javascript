@@ -1,0 +1,40 @@
+#zone {
+    color: darkred; 
+}
+
+sup {
+    color: red;
+}
+
+.row {
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.column1 {
+    float: left;
+    width: 25%;
+    padding-left: 100px;
+}
+
+h3 {
+    margin: 0 0 18px 0;
+}
+
+#adress {
+    margin: 40px 0 40px 0;
+}
+
+#environnementTechnique {
+    width: 200px;
+}
+
+textarea {
+    overflow-y: scroll;
+}
+
+.button {
+    clear: left;
+    margin-left: 220px;
+}
+
