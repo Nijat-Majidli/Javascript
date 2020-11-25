@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <!-- Responsive design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <p id="first"> </p>
+
+
+        <script>
+            var PU = Number(window.prompt("Entrez le prix unitaire(PU): "));
+            var QTECOM = Number(window.prompt("Entrez la quantité commandée(QTECOM): "));
+            var TOTAL1 = (PU * QTECOM);
+            var TOTAL2 = 0;
+            var PAP = 0;    //Prix à Payer 
+            var REMISE = 0;  
+            var PORT = 0;
+
+
+            if (100<=TOTAL1 && TOTAL1<=200)
+            {
+                REMISE = TOTAL1 * 0.05;
+                TOTAL2 = TOTAL1 - REMISE;
+                PORT =  Math.floor(TOTAL2 * 0.02);
+                
+                if(PORT<6)
+                {
+                    PORT=6;
+                }
+                
+                PAP = TOTAL2 + PORT;
+            }
+            else if(TOTAL1>200)
+            {
+                REMISE = TOTAL1 * 0.10;
+                TOTAL2 = TOTAL1 - REMISE;
+
+                if(TOTAL2<500)
+                {
+                    PORT = Math.floor(TOTAL2 * 0.02);
+                   
+                    if(PORT<6)
+                    {
+                        PORT=6;
+                    }
+                }
+                
+                PAP = TOTAL2 + PORT;
+            }
+            else
+            {
+                REMISE = 0;
+                PORT = 6;
+                PAP = TOTAL1 + PORT
+            }
+
+            document.getElementById("first").innerHTML = "Total: " + TOTAL1 +  "<br>" +
+            "Remise: " + REMISE + "<br>" + "Port: " + PORT + "<br>" +
+            "Prix à payer: " + PAP
+
+        </script>    
+    </body>
+</html>
