@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <p id="result1"> </p>
+        <p id="result2"> </p>
+
+
+        <script>
+            
+            var tab = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel", "Stéphane"];
+            
+            document.getElementById("result1").innerHTML= "Tableau initial: " + tab;
+
+            var name = window.prompt("Saisissez un prénom: ");
+            
+            if(tab.indexOf(name)>-1)
+            {
+                newArray();
+            }
+            else
+            {
+                window.alert("Ce prénom n'est pas dans le tableau.")
+            }
+
+
+            function newArray()
+            {
+                var newArray = [];
+
+                for (var i in tab)
+                {
+                    if (tab[i]!=name)
+                    {
+                        newArray.push(tab[i]);
+                    }
+                }
+                newArray.push("");
+                document.getElementById("result2").innerHTML= "Tableau modifié: " + newArray
+            }
+
+
+   
+            
+
+        </script>    
+    </body>
+</html>
